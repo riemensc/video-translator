@@ -1,4 +1,4 @@
-<h1>Title: AI-Powered Video Translator with TTS and Subtitles</h1>
+<h1>Title: AI-Powered Video Translator with TTS and Subtitles SRT</h1>
 
 Description:
 This Python project provides a command-line tool for translating videos, incorporating several powerful AI technologies. The tool takes a video as input, extracts the audio, transcribes it using the Whisper model, translates the text using the Google Translate API, refines the translation with Gemini API, generates Text-to-Speech (TTS) audio using various engines (gTTS, OpenAI TTS, and Google Cloud TTS), and finally combines the translated audio with the original video while generating an SRT subtitle file.
@@ -34,4 +34,40 @@ Generate a Gemini Key and add it. Thats all. If you want to use other TTS engine
 Usage:
 
 # Command Line Interface (CLI)
-python ai-translate.py --video input.mp4 --output output.mp4 --srt subtitles.srt --language de --tts_engine gtts
+
+Basic Translation with Default Settings
+This command uses the default settings defined in your script for the medium model, gtts as the TTS engine, and translates the video to German (de)
+      python ai-translate.py --video input.mp4 --output translated_output.mp4 --srt subtitles.srt --language de
+sample German: python ai-translate.py --video input.mp4 --output output.mp4 --srt subtitles.srt --language de --tts_engine gtts
+    --video input.mp4: Specifies the input video file. (Replace input.mp4 with your video file's name).
+•	--output translated_output.mp4: Specifies the output video file with the translated audio.
+•	--srt subtitles.srt: Specifies the output SRT subtitle file.
+•	--language de: Specifies the target language for translation (German).
+
+Using a Different Target Language
+To translate to Spanish (es):
+      python ai-translate.py --video input.mp4 --output translated_spanish.mp4 --srt subtitles_es.srt --language es
+    
+To translate to French (fr):
+      python ai-translate.py --video input.mp4 --output translated_french.mp4 --srt subtitles_fr.srt --language fr
+    
+To translate to Italian (it):
+      python ai-translate.py --video input.mp4 --output translated_italian.mp4 --srt subtitles_it.srt --language it
+    
+To translate to Japanese (ja):
+      python ai-translate.py --video input.mp4 --output translated_japanese.mp4 --srt subtitles_ja.srt --language ja
+    
+To translate to Korean (ko):
+      python ai-translate.py --video input.mp4 --output translated_korean.mp4 --srt subtitles_ko.srt --language ko
+    
+Using the OpenAI TTS Engine
+To use the OpenAI TTS engine, you will need to set the OPENAI_API_KEY in your environment variables.
+      python ai-translate.py --video input.mp4 --output openai_translated.mp4 --srt openai_subtitles.srt --language de --tts_engine openai
+    
+Custom OpenAI Voice and Speed
+To specify a different voice and speed with OpenAI:
+      python ai-translate.py --video input.mp4 --output openai_custom.mp4 --srt openai_custom.srt --language de --tts_engine openai --openai_voice nova --openai_speed 1.2
+    
+•	--openai_voice nova: Sets the OpenAI voice to nova.
+•	--openai_speed 1.2: Sets the OpenAI speed to 1.2 (you can use values from 0.25 to 4.0).
+
