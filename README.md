@@ -39,7 +39,7 @@ Basic Translation with Default Settings
 This command uses the default settings defined in your script for the medium model, gtts as the TTS engine, and translates the video to German (de)
       python ai-translate.py --video input.mp4 --output translated_output.mp4 --srt subtitles.srt --language de
 <br>
-<h2>sample German: python ai-translate.py --video input.mp4 --output output.mp4 --srt subtitles.srt --language de --tts_engine gtts </h2>
+<h2>sample German: <br> python ai-translate.py --video input.mp4 --output output.mp4 --srt subtitles.srt --language de --tts_engine gtts </h2>
     --video input.mp4: Specifies the input video file. (Replace input.mp4 with your video file's name).<br>
 •	--output translated_output.mp4: Specifies the output video file with the translated audio.<br>
 •	--srt subtitles.srt: Specifies the output SRT subtitle file.<br>
