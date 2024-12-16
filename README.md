@@ -1,4 +1,4 @@
-Title: AI-Powered Video Translator with TTS and Subtitles
+<h1>Title: AI-Powered Video Translator with TTS and Subtitles</h1>
 
 Description:
 This Python project provides a command-line tool for translating videos, incorporating several powerful AI technologies. The tool takes a video as input, extracts the audio, transcribes it using the Whisper model, translates the text using the Google Translate API, refines the translation with Gemini API, generates Text-to-Speech (TTS) audio using various engines (gTTS, OpenAI TTS, and Google Cloud TTS), and finally combines the translated audio with the original video while generating an SRT subtitle file.
