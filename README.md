@@ -30,7 +30,7 @@ Technologies Used:
 
 Install
 pip install faster-whisper deep-translator gtts tqdm google-generativeai google-cloud-texttospeech openai
-
+Generate a Gemini Key and add it. Thats all. If you want to use other TTS engine you need to also API Keys.
 Usage:
 
 # Command Line Interface (CLI)
